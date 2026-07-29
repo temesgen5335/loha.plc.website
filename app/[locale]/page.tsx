@@ -1,15 +1,10 @@
 import Header from "../components/Header";
-import Logo from "../components/Logo";
 import Reveal from "../components/Reveal";
 import QuoteForm from "../components/QuoteForm";
+import Gallery from "../components/Gallery";
+import Footer from "../components/Footer";
 import { dictionaries, type Locale } from "../i18n/dictionaries";
-
-const CONTACT = {
-  tel: "011883939435",
-  mobiles: ["+251 911 878 237", "+251 910 798 074"],
-  email: "loha.advertsing9247@gmail.com",
-  whatsapp: "251911878237",
-};
+import { site, mapEmbedUrl } from "../config/site";
 
 function IconPrint() {
   return (
@@ -210,8 +205,38 @@ export default async function Home({
         </div>
       </section>
 
+      {/* Our Work / Gallery */}
+      <section id="work" className="scroll-mt-20 py-20 sm:py-28">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-widest text-brand-600">
+              {dict.gallery.eyebrow}
+            </p>
+            <h2 className="mt-3 max-w-2xl text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+              {dict.gallery.h2}
+            </h2>
+            <p className="mt-4 max-w-2xl text-slate-600">{dict.gallery.p}</p>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="mt-10">
+              <Gallery locale={locale} t={dict.gallery} />
+            </div>
+          </Reveal>
+          <Reveal delay={150}>
+            <div className="mt-12 text-center">
+              <a
+                href="#contact"
+                className="inline-block rounded-full bg-accent-500 px-7 py-3.5 text-sm font-semibold text-brand-950 transition hover:bg-accent-400"
+              >
+                {dict.gallery.cta}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       {/* Why LOHA */}
-      <section className="py-20 sm:py-28">
+      <section className="bg-slate-50 py-20 sm:py-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
@@ -223,7 +248,7 @@ export default async function Home({
               </h2>
               <p className="mt-5 leading-relaxed text-slate-600">{dict.why.p}</p>
               <a
-                href={`tel:${CONTACT.mobiles[0].replace(/\s/g, "")}`}
+                href={`tel:${site.phones.mobiles[0].replace(/\s/g, "")}`}
                 className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-brand-700 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-800"
               >
                 <IconPhone />
@@ -260,16 +285,16 @@ export default async function Home({
               </p>
 
               <div className="mt-10 space-y-5">
-                <a href={`tel:${CONTACT.tel}`} className="flex items-center gap-4 text-white/90 transition hover:text-white">
+                <a href={`tel:${site.phones.telephone}`} className="flex items-center gap-4 text-white/90 transition hover:text-white">
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10">
                     <IconPhone />
                   </span>
                   <span>
                     <span className="block text-xs uppercase tracking-wide text-white/50">{dict.contact.telephone}</span>
-                    <span className="font-semibold">{CONTACT.tel}</span>
+                    <span className="font-semibold">{site.phones.telephone}</span>
                   </span>
                 </a>
-                {CONTACT.mobiles.map((m) => (
+                {site.phones.mobiles.map((m) => (
                   <a key={m} href={`tel:${m.replace(/\s/g, "")}`} className="flex items-center gap-4 text-white/90 transition hover:text-white">
                     <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10">
                       <IconPhone />
@@ -280,17 +305,17 @@ export default async function Home({
                     </span>
                   </a>
                 ))}
-                <a href={`mailto:${CONTACT.email}`} className="flex items-center gap-4 text-white/90 transition hover:text-white">
+                <a href={`mailto:${site.email}`} className="flex items-center gap-4 text-white/90 transition hover:text-white">
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-white/10">
                     <IconMail />
                   </span>
                   <span>
                     <span className="block text-xs uppercase tracking-wide text-white/50">{dict.contact.email}</span>
-                    <span className="font-semibold">{CONTACT.email}</span>
+                    <span className="font-semibold">{site.email}</span>
                   </span>
                 </a>
                 <a
-                  href={`https://wa.me/${CONTACT.whatsapp}`}
+                  href={`https://wa.me/${site.whatsapp}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 text-white/90 transition hover:text-white"
@@ -310,23 +335,39 @@ export default async function Home({
               <div className="rounded-2xl bg-white p-7 text-slate-900 shadow-xl sm:p-9">
                 <h3 className="text-lg font-bold">{dict.form.heading}</h3>
                 <p className="mb-6 mt-1 text-sm text-slate-500">{dict.form.sub}</p>
-                <QuoteForm form={dict.form} email={CONTACT.email} />
+                <QuoteForm form={dict.form} email={site.email} />
               </div>
             </Reveal>
           </div>
+
+          {/* Map */}
+          <Reveal delay={200}>
+            <div className="mt-14">
+              <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
+                <h3 className="text-lg font-bold">{dict.map.title}</h3>
+                <a
+                  href={site.map.shareUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm font-medium text-accent-400 transition hover:text-accent-500"
+                >
+                  {dict.map.hint} →
+                </a>
+              </div>
+              <iframe
+                src={mapEmbedUrl()}
+                title={dict.map.title}
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-[340px] w-full rounded-2xl border-0 sm:h-[400px]"
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="border-t border-white/10 bg-brand-950 py-8 text-sm text-white/50">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
-          <div className="flex items-center gap-3">
-            <Logo variant="reverse" size={26} />
-            <p>© {new Date().getFullYear()} {dict.footer.rights}</p>
-          </div>
-          <p>{dict.footer.tagline}</p>
-        </div>
-      </footer>
+      <Footer dict={dict} />
     </main>
   );
 }

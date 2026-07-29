@@ -109,6 +109,7 @@ export default function Header({
 
   const links = [
     { href: "#services", label: nav.services },
+    { href: "#work", label: nav.work },
     { href: "#contact", label: nav.contact },
   ];
 
