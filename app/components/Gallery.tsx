@@ -50,9 +50,14 @@ export default function Gallery({
     };
   }, [lightbox, step]);
 
+  // Only categories that actually have photos get a chip; empty ones appear
+  // automatically once their first item lands in config/gallery.ts.
+  const populated = galleryCategories.filter((c) =>
+    galleryItems.some((item) => item.category === c)
+  );
   const chips: { key: Filter; label: string }[] = [
     { key: "all", label: t.all },
-    ...galleryCategories.map((c) => ({ key: c as Filter, label: t.categories[c] })),
+    ...populated.map((c) => ({ key: c as Filter, label: t.categories[c] })),
   ];
 
   return (
