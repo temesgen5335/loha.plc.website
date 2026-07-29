@@ -23,9 +23,9 @@ export const site = {
   // 2. Right-click the place on the map, copy the coordinates, and paste
   //    them into lat/lng below. The embed updates automatically.
   map: {
-    shareUrl: "https://maps.app.goo.gl/enoURCNMMCrPQq1q9",
-    lat: 8.9151114,
-    lng: 38.8214333,
+    shareUrl: "https://maps.app.goo.gl/CouGietvuhpsHci66",
+    lat: 8.9129101,
+    lng: 38.627294,
     zoom: 16,
   },
 } as const;
