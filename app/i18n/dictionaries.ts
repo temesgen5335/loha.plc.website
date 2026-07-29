@@ -16,6 +16,7 @@ const en = {
   },
   nav: {
     services: "Services",
+    work: "Our Work",
     contact: "Contact",
     cta: "Get Pricing",
   },
@@ -126,9 +127,33 @@ const en = {
       "Other",
     ],
   },
+  gallery: {
+    eyebrow: "Our work",
+    h2: "Recent projects from our workshop",
+    p: "Real signs, prints and awards we produced and installed for our customers.",
+    all: "All",
+    comingSoon: "Photos coming soon — this is where our next projects will appear.",
+    cta: "Want yours? Get pricing",
+    close: "Close",
+    categories: {
+      led: "LED Signs",
+      printing: "Printing",
+      tshirts: "T-Shirts",
+      awards: "Awards & Engraving",
+      water: "Water Delivery",
+      blocks: "Building Blocks",
+    },
+  },
+  map: {
+    title: "Visit us",
+    hint: "Open in Google Maps",
+  },
   footer: {
     rights: "LOHA Advertising PLC. All rights reserved.",
     tagline: "Printing · Advertising · Water Delivery · Building Blocks",
+    quickLinks: "Quick links",
+    followUs: "Follow us",
+    contactTitle: "Contact",
   },
 };
 
@@ -142,6 +167,7 @@ const am: Dictionary = {
   },
   nav: {
     services: "አገልግሎቶች",
+    work: "ስራዎቻችን",
     contact: "አግኙን",
     cta: "ዋጋ ይጠይቁ",
   },
@@ -252,9 +278,33 @@ const am: Dictionary = {
       "ሌላ",
     ],
   },
+  gallery: {
+    eyebrow: "ስራዎቻችን",
+    h2: "ከመስሪያ ቤታችን የቅርብ ጊዜ ፕሮጀክቶች",
+    p: "ለደንበኞቻችን የሰራናቸውና የተከልናቸው እውነተኛ ምልክቶች፣ ህትመቶችና ሽልማቶች።",
+    all: "ሁሉም",
+    comingSoon: "ፎቶዎች በቅርቡ ይመጣሉ — ቀጣይ ፕሮጀክቶቻችን እዚህ ይታያሉ።",
+    cta: "የእርስዎን ይፈልጋሉ? ዋጋ ይጠይቁ",
+    close: "ዝጋ",
+    categories: {
+      led: "LED ምልክቶች",
+      printing: "ህትመት",
+      tshirts: "ቲሸርት",
+      awards: "ሽልማትና ቅርጻ",
+      water: "የውሃ አቅርቦት",
+      blocks: "የግንባታ ብሎኬት",
+    },
+  },
+  map: {
+    title: "ይጎብኙን",
+    hint: "በጉግል ካርታ ይክፈቱ",
+  },
   footer: {
     rights: "ሎሃ አድቨርታይዚንግ ኃ.የተ.የግ.ማ። መብቱ በህግ የተጠበቀ ነው።",
     tagline: "ህትመት · ማስታወቂያ · የውሃ አቅርቦት · የግንባታ ብሎኬት",
+    quickLinks: "ፈጣን አገናኞች",
+    followUs: "ይከተሉን",
+    contactTitle: "አግኙን",
   },
 };
 
@@ -267,6 +317,7 @@ const om: Dictionary = {
   },
   nav: {
     services: "Tajaajiloota",
+    work: "Hojiiwwan keenya",
     contact: "Nu qunnamaa",
     cta: "Gatii gaafadhaa",
   },
@@ -377,9 +428,33 @@ const om: Dictionary = {
       "Kan biraa",
     ],
   },
+  gallery: {
+    eyebrow: "Hojiiwwan keenya",
+    h2: "Pirojektoota dhiyoo warshaa keenyaa",
+    p: "Mallattoolee, maxxansaalee fi badhaasota dhugaa maamiltoota keenyaaf hojjennee dhaabne.",
+    all: "Hunda",
+    comingSoon: "Suuraaleen dhiyootti ni dhufu — pirojektoonni keenya itti aanan asitti mul'atu.",
+    cta: "Kan kee barbaaddaa? Gatii gaafadhu",
+    close: "Cufi",
+    categories: {
+      led: "Mallattoo LED",
+      printing: "Maxxansa",
+      tshirts: "Tishartii",
+      awards: "Badhaasaa fi Soofuu",
+      water: "Dhiyeessii Bishaanii",
+      blocks: "Blokeetii Ijaarsaa",
+    },
+  },
+  map: {
+    title: "Nu daawwadhaa",
+    hint: "Google Maps irratti banaa",
+  },
   footer: {
     rights: "LOHA Advertising PLC. Mirgi hundi seeraan eegamaadha.",
     tagline: "Maxxansa · Beeksisa · Dhiyeessii Bishaanii · Blokeetii Ijaarsaa",
+    quickLinks: "Geessituu ariifataa",
+    followUs: "Nu hordofaa",
+    contactTitle: "Nu qunnamaa",
   },
 };
 
