@@ -270,7 +270,7 @@ export default async function Home({
       </section>
 
       {/* Contact */}
-      <section id="contact" className="scroll-mt-20 bg-brand-950 py-20 text-white sm:py-28">
+      <section id="contact" className="scroll-mt-20 bg-brand-950 pt-20 text-white sm:pt-28">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="grid gap-12 lg:grid-cols-2">
             <Reveal>
@@ -340,30 +340,29 @@ export default async function Home({
             </Reveal>
           </div>
 
-          {/* Map */}
-          <Reveal delay={200}>
-            <div className="mt-14">
-              <div className="mb-4 flex flex-wrap items-baseline justify-between gap-2">
-                <h3 className="text-lg font-bold">{dict.map.title}</h3>
-                <a
-                  href={site.map.shareUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm font-medium text-accent-400 transition hover:text-accent-500"
-                >
-                  {dict.map.hint} →
-                </a>
-              </div>
-              <iframe
-                src={mapEmbedUrl()}
-                title={dict.map.title}
-                loading="lazy"
-                allowFullScreen
-                referrerPolicy="no-referrer-when-downgrade"
-                className="h-[340px] w-full rounded-2xl border-0 sm:h-[400px]"
-              />
-            </div>
-          </Reveal>
+        </div>
+
+        {/* Map — full-bleed width, flush with the footer */}
+        <div className="mt-16 sm:mt-20">
+          <div className="mx-auto mb-4 flex max-w-6xl flex-wrap items-baseline justify-between gap-2 px-4 sm:px-6">
+            <h3 className="text-lg font-bold">{dict.map.title}</h3>
+            <a
+              href={site.map.shareUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-accent-400 transition hover:text-accent-500"
+            >
+              {dict.map.hint} →
+            </a>
+          </div>
+          <iframe
+            src={mapEmbedUrl()}
+            title={dict.map.title}
+            loading="lazy"
+            allowFullScreen
+            referrerPolicy="no-referrer-when-downgrade"
+            className="block h-[380px] w-full border-0 sm:h-[440px]"
+          />
         </div>
       </section>
 
