@@ -20,10 +20,13 @@ export const site = {
 
   // Map location. To change the address later:
   // 1. Open the place in Google Maps and copy the share link into shareUrl.
-  // 2. Right-click the place on the map, copy the coordinates, and paste
-  //    them into lat/lng below. The embed updates automatically.
+  // 2. Put the place name/address into placeQuery (exactly as Google Maps
+  //    shows it). The embed pins it automatically.
+  // 3. If the place has no Google Maps listing, clear placeQuery ("") and
+  //    fill lat/lng instead (right-click the map → copy coordinates).
   map: {
-    shareUrl: "https://maps.app.goo.gl/CouGietvuhpsHci66",
+    shareUrl: "https://maps.app.goo.gl/8UXP5MxEhQcMLZFg8",
+    placeQuery: "Awash Bank Sebeta, Abrar Building, Sebeta",
     lat: 8.9129101,
     lng: 38.627294,
     zoom: 16,
@@ -31,6 +34,7 @@ export const site = {
 } as const;
 
 export function mapEmbedUrl() {
-  const { lat, lng, zoom } = site.map;
-  return `https://www.google.com/maps?q=${lat},${lng}&z=${zoom}&output=embed`;
+  const { placeQuery, lat, lng, zoom } = site.map;
+  const q = placeQuery ? encodeURIComponent(placeQuery) : `${lat},${lng}`;
+  return `https://www.google.com/maps?q=${q}&z=${zoom}&output=embed`;
 }
