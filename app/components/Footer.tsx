@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Logo from "./Logo";
 import { site } from "../config/site";
 import type { Dictionary } from "../i18n/dictionaries";
@@ -38,9 +39,9 @@ function IconTikTok() {
 
 const socialEntries = [
   { key: "telegram", label: "Telegram", icon: <IconTelegram /> },
+  { key: "tiktok", label: "TikTok", icon: <IconTikTok /> },
   { key: "facebook", label: "Facebook", icon: <IconFacebook /> },
   { key: "instagram", label: "Instagram", icon: <IconInstagram /> },
-  { key: "tiktok", label: "TikTok", icon: <IconTikTok /> },
 ] as const;
 
 export default function Footer({ dict }: { dict: Dictionary }) {
@@ -52,8 +53,24 @@ export default function Footer({ dict }: { dict: Dictionary }) {
   ];
 
   return (
-    <footer className="border-t border-white/10 bg-brand-950 text-white/70">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
+    <footer className="relative overflow-hidden border-t border-white/10 bg-brand-950 text-white/70">
+      {/* Legacy ሎሃ mark as a heritage watermark. invert+grayscale turns the
+          white JPEG background black, which `screen` then renders as nothing
+          against the navy — leaving only the letterforms as a faint glow. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 -top-10 hidden w-[560px] select-none opacity-[0.07] mix-blend-screen [filter:invert(1)_grayscale(1)] lg:block"
+      >
+        <Image
+          src="/brand/loha-legacy-mark.jpg"
+          alt=""
+          width={630}
+          height={320}
+          className="h-auto w-full"
+        />
+      </div>
+
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
             <Logo variant="reverse" size={34} />
@@ -137,7 +154,7 @@ export default function Footer({ dict }: { dict: Dictionary }) {
         </div>
       </div>
 
-      <div className="border-t border-white/10 py-6 text-center text-xs text-white/45">
+      <div className="relative border-t border-white/10 py-6 text-center text-xs text-white/45">
         © {new Date().getFullYear()} {dict.footer.rights}
       </div>
     </footer>

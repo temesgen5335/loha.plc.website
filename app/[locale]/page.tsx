@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Header from "../components/Header";
 import Reveal from "../components/Reveal";
 import QuoteForm from "../components/QuoteForm";
@@ -95,6 +96,20 @@ export default async function Home({
             backgroundSize: "56px 56px",
           }}
         />
+        {/* Legacy ሎሃ mark, same heritage treatment as the footer but fainter —
+            it sits right of the headline column so it never crosses the text. */}
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute -right-20 bottom-6 hidden w-[560px] select-none opacity-[0.05] mix-blend-screen [filter:invert(1)_grayscale(1)] xl:block"
+        >
+          <Image
+            src="/brand/loha-legacy-mark.jpg"
+            alt=""
+            width={630}
+            height={320}
+            className="h-auto w-full"
+          />
+        </div>
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
           <Reveal>
             <p className="mb-4 inline-block rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-medium tracking-wide text-white/80">
