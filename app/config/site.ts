@@ -4,7 +4,7 @@
 export const site = {
   phones: {
     telephone: "011883939435",
-    mobiles: ["+251 911 878 237", "+251 910 798 074"],
+    mobiles: ["+251 911 878 237", "+251 910 798 074", "+251 944 110 922"],
   },
   email: "loha.advertsing9247@gmail.com",
   whatsapp: "251911878237",
@@ -12,10 +12,10 @@ export const site = {
   // Social profiles. "#" renders the icon as a placeholder until the real
   // profile URL is added.
   socials: {
-    telegram: "https://t.me/ORGANITHATION",
+    telegram: "https://t.me/Lohaadvert",
+    tiktok: "https://www.tiktok.com/@lohaprint",
     facebook: "#",
     instagram: "#",
-    tiktok: "#",
   },
 
   // Map location. To change the address later:
