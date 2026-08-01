@@ -65,7 +65,7 @@ export default function Footer({ dict }: { dict: Dictionary }) {
           src="/brand/loha-legacy-mark.jpg"
           alt=""
           width={630}
-          height={320}
+          height={288}
           className="h-auto w-full"
         />
       </div>

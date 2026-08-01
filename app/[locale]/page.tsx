@@ -96,18 +96,21 @@ export default async function Home({
             backgroundSize: "56px 56px",
           }}
         />
-        {/* Legacy ሎሃ mark, same heritage treatment as the footer but fainter —
-            it sits right of the headline column so it never crosses the text. */}
+        {/* Legacy ሎሃ mark, same heritage treatment as the footer — filling the
+            whole section as a ghosted brand plate behind the copy. `contain` on
+            narrow screens keeps the mark readable where `cover` would crop it
+            down to a single letterform. */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute -right-20 bottom-6 hidden w-[560px] select-none opacity-[0.05] mix-blend-screen [filter:invert(1)_grayscale(1)] xl:block"
+          className="pointer-events-none absolute inset-0 select-none opacity-[0.05] mix-blend-screen [filter:invert(1)_grayscale(1)]"
         >
           <Image
             src="/brand/loha-legacy-mark.jpg"
             alt=""
-            width={630}
-            height={320}
-            className="h-auto w-full"
+            fill
+            sizes="100vw"
+            priority
+            className="object-contain md:object-cover"
           />
         </div>
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
