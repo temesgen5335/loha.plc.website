@@ -8,6 +8,7 @@ export const galleryCategories = [
   "printing",
   "tshirts",
   "awards",
+  "equipment",
   "water",
   "blocks",
 ] as const;
@@ -82,6 +83,15 @@ export const galleryItems: GalleryItem[] = [
       en: "Office of the Mayor, Addis Ababa — backlit lobby crest",
       am: "የአዲስ አበባ ከንቲባ ጽህፈት ቤት — ከኋላ የሚበራ አርማ",
       om: "Waajjira Kantiibaa Finfinnee — asxaa duubaan ifu",
+    },
+  },
+  {
+    src: "/gallery/led-kilinkayaala-clinic.jpg",
+    category: "led",
+    caption: {
+      en: "Kilinkayaala Ijaa Faamilii — illuminated clinic sign in Afaan Oromoo and Amharic",
+      am: "ፋሚሊ የአይን ህክምና ክሊኒክ — በኦሮምኛና በአማርኛ የበራ ምልክት",
+      om: "Kilinkayaala Ijaa Faamilii — mallattoo ifu Afaan Oromoo fi Amaariffaan",
     },
   },
   {
@@ -244,6 +254,42 @@ export const galleryItems: GalleryItem[] = [
       en: "Engraved brass staff name tags",
       am: "የተቀረጹ የናስ የሰራተኛ መለያዎች",
       om: "Mallattoo maqaa hojjettootaa naasii irratti soofame",
+    },
+  },
+  {
+    src: "/gallery/equipment-banner-printing.jpg",
+    category: "equipment",
+    caption: {
+      en: "Wide-format printer running banners in our own workshop",
+      am: "በራሳችን መስሪያ ቤት ባነር እያተመ ያለ ሰፊ ማተሚያ ማሽን",
+      om: "Maashinii maxxansaa bal'aa warshaa keenya keessatti baanarii maxxansaa jiru",
+    },
+  },
+  {
+    src: "/gallery/equipment-wideformat-printer.jpg",
+    category: "equipment",
+    caption: {
+      en: "Large-format printer for banners, mesh and outdoor prints",
+      am: "ለባነር፣ ለሜሽና ለውጭ ህትመቶች የሚያገለግል ሰፊ ማተሚያ",
+      om: "Maashinii maxxansaa bal'aa baanarii, meeshii fi maxxansa alaatiif",
+    },
+  },
+  {
+    src: "/gallery/equipment-uv-and-laser.jpg",
+    category: "equipment",
+    caption: {
+      en: "UV printer and CNC laser cutter on our production floor",
+      am: "በምርት ክፍላችን ውስጥ ያሉ የUV ማተሚያና CNC ሌዘር መቁረጫ",
+      om: "Maashinii maxxansaa UV fi muraa leezerii CNC bakka oomishaa keenyatti",
+    },
+  },
+  {
+    src: "/gallery/equipment-laser-cutter.jpg",
+    category: "equipment",
+    caption: {
+      en: "CNC laser cutter used for signage, letters and engraving",
+      am: "ለምልክት፣ ለፊደላትና ለቅርጻ ስራ የሚያገለግል CNC ሌዘር መቁረጫ",
+      om: "Muraa leezerii CNC mallattoo, qubee fi soofuuf oolu",
     },
   },
 ];

@@ -93,6 +93,8 @@ const en = {
     h2: "A partner that shows up — for your brand and your site",
     p: "Whether you are launching a business, running a campaign or building a home, LOHA brings the same commitment: quality materials, honest pricing and on-time delivery.",
     call: "Call Us Now",
+    equipmentCaption:
+      "Our own wide-format printer at work in Sebeta — banners, signage and prints are produced in-house, so we control quality and timing.",
     features: [
       { t: "One-stop supplier", d: "Printing, signage, water and blocks from a single, accountable partner." },
       { t: "Quality first", d: "Durable prints, bright signage and consistent block production." },
@@ -135,7 +137,7 @@ const en = {
   gallery: {
     eyebrow: "Our work",
     h2: "Recent projects from our workshop",
-    p: "Real signs, prints and awards we produced and installed for our customers.",
+    p: "Real signs, prints and awards we produced and installed for our customers — made on our own machines.",
     all: "All",
     comingSoon: "Photos coming soon — this is where our next projects will appear.",
     cta: "Want yours? Get pricing",
@@ -145,6 +147,7 @@ const en = {
       printing: "Printing",
       tshirts: "T-Shirts",
       awards: "Awards & Engraving",
+      equipment: "Our Equipment",
       water: "Water Delivery",
       blocks: "Building Blocks",
     },
@@ -249,6 +252,8 @@ const am: Dictionary = {
     h2: "ለብራንድዎም ለግንባታዎም የማይለይዎ አጋር",
     p: "ንግድ ሲጀምሩ፣ ዘመቻ ሲያካሂዱ ወይም ቤት ሲገነቡ — ሎሃ ተመሳሳይ ቁርጠኝነት ይዞ ይመጣል፦ ጥራት ያለው ቁሳቁስ፣ ተገቢ ዋጋና በጊዜው ማድረስ።",
     call: "አሁን ይደውሉ",
+    equipmentCaption:
+      "በሰበታ የሚገኘው የራሳችን ሰፊ ማተሚያ ማሽን በስራ ላይ — ባነር፣ ምልክትና ህትመቶች በራሳችን ስለሚሰሩ ጥራቱንና ጊዜውን እኛው እንቆጣጠራለን።",
     features: [
       { t: "ሁሉም በአንድ ቦታ", d: "ህትመት፣ ምልክት፣ ውሃና ብሎኬት ከአንድ ተጠያቂ አጋር።" },
       { t: "ጥራት ቅድሚያ", d: "ዘላቂ ህትመቶች፣ ደማቅ ምልክቶችና ወጥ የብሎኬት ምርት።" },
@@ -291,7 +296,7 @@ const am: Dictionary = {
   gallery: {
     eyebrow: "ስራዎቻችን",
     h2: "ከመስሪያ ቤታችን የቅርብ ጊዜ ፕሮጀክቶች",
-    p: "ለደንበኞቻችን የሰራናቸውና የተከልናቸው እውነተኛ ምልክቶች፣ ህትመቶችና ሽልማቶች።",
+    p: "ለደንበኞቻችን የሰራናቸውና የተከልናቸው እውነተኛ ምልክቶች፣ ህትመቶችና ሽልማቶች — በራሳችን ማሽኖች የተሰሩ።",
     all: "ሁሉም",
     comingSoon: "ፎቶዎች በቅርቡ ይመጣሉ — ቀጣይ ፕሮጀክቶቻችን እዚህ ይታያሉ።",
     cta: "የእርስዎን ይፈልጋሉ? ዋጋ ይጠይቁ",
@@ -301,6 +306,7 @@ const am: Dictionary = {
       printing: "ህትመት",
       tshirts: "ቲሸርት",
       awards: "ሽልማትና ቅርጻ",
+      equipment: "የእኛ ማሽኖች",
       water: "የውሃ አቅርቦት",
       blocks: "የግንባታ ብሎኬት",
     },
@@ -404,6 +410,8 @@ const om: Dictionary = {
     h2: "Michuu braandii keetiif fi ijaarsa keetiif si bira dhaabbatu",
     p: "Daldala yoo jalqabde, duula yoo geggeessite ykn mana yoo ijaarte — LOHA kutannoo wal fakkaataa qaba: meeshaa qulqullina qabu, gatii haqaa fi yeroon dhiyeessuu.",
     call: "Amma bilbilaa",
+    equipmentCaption:
+      "Maashiniin maxxansaa bal'aa keenya Sabbataatti hojii irra jira — baanariin, mallattoon fi maxxansi keessumatti waan hojjetamuuf qulqullinaa fi yeroo ofii keenyaan too'anna.",
     features: [
       { t: "Dhiyeessaa waan hundaa", d: "Maxxansa, mallattoo, bishaanii fi blokeetii michuu itti gaafatamaa tokko irraa." },
       { t: "Qulqullinni dursa", d: "Maxxansa cimaa, mallattoo ifaa fi oomisha blokeetii wal fakkaataa." },
@@ -446,7 +454,7 @@ const om: Dictionary = {
   gallery: {
     eyebrow: "Hojiiwwan keenya",
     h2: "Pirojektoota dhiyoo warshaa keenyaa",
-    p: "Mallattoolee, maxxansaalee fi badhaasota dhugaa maamiltoota keenyaaf hojjennee dhaabne.",
+    p: "Mallattoolee, maxxansaalee fi badhaasota dhugaa maamiltoota keenyaaf hojjennee dhaabne — maashinii keenyaan hojjetaman.",
     all: "Hunda",
     comingSoon: "Suuraaleen dhiyootti ni dhufu — pirojektoonni keenya itti aanan asitti mul'atu.",
     cta: "Kan kee barbaaddaa? Gatii gaafadhu",
@@ -456,6 +464,7 @@ const om: Dictionary = {
       printing: "Maxxansa",
       tshirts: "Tishartii",
       awards: "Badhaasaa fi Soofuu",
+      equipment: "Meeshaalee keenya",
       water: "Dhiyeessii Bishaanii",
       blocks: "Blokeetii Ijaarsaa",
     },

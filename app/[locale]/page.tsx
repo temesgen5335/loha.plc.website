@@ -265,6 +265,23 @@ export default async function Home({
                 {dict.why.h2}
               </h2>
               <p className="mt-5 leading-relaxed text-slate-600">{dict.why.p}</p>
+
+              {/* In-house production floor — proof that the work is made here,
+                  not brokered out. */}
+              <figure className="mt-8 overflow-hidden rounded-2xl bg-slate-200 shadow-sm">
+                <Image
+                  src="/gallery/equipment-banner-printing.jpg"
+                  alt={dict.why.equipmentCaption}
+                  width={1280}
+                  height={853}
+                  sizes="(min-width: 1024px) 46vw, 100vw"
+                  className="h-auto w-full"
+                />
+                <figcaption className="bg-white px-5 py-3.5 text-xs leading-relaxed text-slate-500">
+                  {dict.why.equipmentCaption}
+                </figcaption>
+              </figure>
+
               <a
                 href={`tel:${site.phones.mobiles[0].replace(/\s/g, "")}`}
                 className="mt-8 inline-flex items-center gap-2.5 rounded-full bg-brand-700 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-brand-800"
